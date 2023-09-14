@@ -1,17 +1,11 @@
-```mermaid
 
-sequenceDiagram
+sequenceDiagram TD
   participant browser
   participants server
 
-  
+  browser --> server: POST https://studies.cs.helsinki.fi/exampleapp/new_note
+  activate server
+  server --> browser: new note
+  deactivate server
 
-browser --> server: POST https://studies.cs.helsinki.fi/exampleapp/new_note
-activate server
-server --> browser: new note
-deactivate server
-
-
-
-```
 
